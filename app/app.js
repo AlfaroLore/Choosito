@@ -2,9 +2,13 @@
     'use strict';
  
     angular
-        .module('app', ['ui.router', 'ngMessages', 'ngStorage','angularUUID2'])
+        .module('app', ['ui.router', 'ngMessages', 'ngStorage','angularUUID2','angular-jwt'])
         .config(config)
-        .run(run);
+        .run(run)
+        .constant('urls', {
+           BASE: 'https://getchoosi.com',
+           BASE_API: 'https://getchoosi.com/KidsChooseApi/v1.0'
+       });
  
     function config($stateProvider, $urlRouterProvider) {
         // default route
