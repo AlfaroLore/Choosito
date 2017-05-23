@@ -1,5 +1,5 @@
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3" ng-controller="Home.IndexController">
     <h1>Home</h1>
-    <p>You're logged in with JWT!!</p>
+    <p>Welcome <span ng-bind="user.firstName"></span></p>
     <p><a href="#/login">Logout</a></p>
 </div>
