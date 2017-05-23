@@ -40,6 +40,7 @@
             // remove user from local storage and clear http auth header
             delete $localStorage.currentUser;
             $http.defaults.headers.common.Authorization = '';
+            $interval.cancel(refreshTokenTimeout);
         }
 
         function handleAuthResponse(response){
